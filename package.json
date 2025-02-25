@@ -2,17 +2,24 @@
   "name": "@uin-federation/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "lint": "nx run-many --target=lint --all"
+  },
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@nx/eslint": "20.4.6",
+    "@nx/eslint-plugin": "20.4.6",
+    "@nx/jest": "20.4.6",
     "@nx/js": "20.4.6",
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
+    "eslint": "~8.57.0",
+    "jest": "^29.7.0",
     "nx": "20.4.6",
     "prettier": "^2.6.2",
     "tslib": "^2.3.0",
     "typescript": "~5.7.2"
-  }
+  },
+  "dependencies": {}
 }
