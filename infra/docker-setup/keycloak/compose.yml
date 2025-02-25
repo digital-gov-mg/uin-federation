@@ -1,0 +1,39 @@
+services:
+  keycloak:
+    container_name: nui_keycloak
+    image: quay.io/keycloak/keycloak:26.1.1
+    environment:
+      DB_VENDOR: postgres
+      DB_ADDR: postgres
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      KEYCLOAK_USER: ${KEYCLOAK_USER}
+      KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD}
+    ports:
+      - '8080:8080'
+    depends_on:
+      - postgres
+    networks:
+      - nui_keycloak_network
+
+  postgres:
+    container_name: nui_postgres
+    image: postgres:17.2
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - nui_keycloak_postgres_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    networks:
+      - nui_keycloak_network
+
+volumes:
+  nui_keycloak_postgres_data:
+
+networks:
+  nui_keycloak_network:
+    driver: bridge
