@@ -59,6 +59,8 @@ services:
       interval: 1s
       timeout: 5s
       retries: 120
+    networks:
+      - network
 
   es01:
     depends_on:
@@ -103,6 +105,8 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
+    networks:
+      - network
 
   es02:
     depends_on:
@@ -144,6 +148,8 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
+    networks:
+      - network
 
   es03:
     depends_on:
@@ -185,6 +191,8 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
+    networks:
+      - network
 
   kibana:
     depends_on:
@@ -212,6 +220,8 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
+    networks:
+      - network
 
 volumes:
   certs:
@@ -224,3 +234,7 @@ volumes:
     driver: local
   kibanadata:
     driver: local
+
+networks:
+  network:
+    driver: bridge
