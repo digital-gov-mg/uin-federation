@@ -4,9 +4,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "nx run-many --target=lint --all",
-    "lint:affected": "nx affected --target=lint",
     "format": "nx format:write",
-    "format:check": "nx format:check",
+    "test": "nx run-many --target=test --all",
     "prepare": "husky",
     "compose:elk:up": "docker compose -p uin-federation -f infra/docker-setup/elk/compose.yml up -d",
     "compose:elk:down": "docker compose -p uin-federation -f infra/docker-setup/elk/compose.yml down",
