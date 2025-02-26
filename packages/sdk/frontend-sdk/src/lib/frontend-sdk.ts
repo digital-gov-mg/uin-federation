@@ -1,3 +1,3 @@
 export function frontendSdk(): string {
-  return 'frontend-sdk';
+  return 'frontend-sdk'
 }

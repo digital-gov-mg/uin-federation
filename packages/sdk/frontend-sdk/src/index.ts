@@ -1,1 +1,1 @@
-export * from './lib/frontend-sdk.js';
+export * from './lib/frontend-sdk.js'
