@@ -8,8 +8,8 @@ const swcJestConfig = JSON.parse(readFileSync(`${__dirname}/.spec.swcrc`, 'utf-8
 swcJestConfig.swcrc = false
 
 export default {
-  displayName: '@uin-federation/frontend-sdk',
-  preset: '../../../jest.preset.js',
+  displayName: '@uin-federation/sdk',
+  preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],

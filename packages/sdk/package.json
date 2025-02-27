@@ -1,5 +1,5 @@
 {
-  "name": "@uin-federation/frontend-sdk",
+  "name": "@uin-federation/sdk",
   "version": "0.0.1",
   "private": true,
   "type": "module",

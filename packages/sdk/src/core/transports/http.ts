@@ -3,7 +3,7 @@ import * as http from 'axios'
 import { HTTPRequestParameters, HTTPInstance, HTTPResponse } from './http-module.js'
 
 import { fetchSytemToken } from '../utils/fetch-system-token.js'
-import { getCookie, setCookie } from '../utils/cookie-processing.js'
+import { getCookie, setCookie } from '../utils/cookie-process.js'
 
 export { http }
 
