@@ -1,5 +1,5 @@
-import { HTTP } from '../transports/index.js'
-import { LogParameters, LogResponse } from '../types.js'
+import { HTTP } from '../../core/transports/index.js'
+import { LogParameters, LogResponse } from '../../common/types.js'
 
 export class Log extends HTTP {
   async retriveAll({ page, limit, type, systemId }: LogParameters): Promise<LogResponse> {
