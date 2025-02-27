@@ -4,12 +4,6 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/sdk/frontend-sdk"
-    },
-    {
-      "path": "./packages"
-    },
-    {
       "path": "./packages/sdk"
     }
   ]
