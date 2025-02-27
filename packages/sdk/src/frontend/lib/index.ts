@@ -1,6 +1,6 @@
-import { Uin } from './uin.js'
-import { Log } from './log.js'
-import { System } from './system.js'
+import { Uin } from '@frontend/lib/uin.js'
+import { Log } from '@frontend/lib/log.js'
+import { System } from '@frontend/lib/system.js'
 
 export class NuiFederation {
   public uin: Uin

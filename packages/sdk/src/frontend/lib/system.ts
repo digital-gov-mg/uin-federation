@@ -1,5 +1,5 @@
-import { HTTP } from '../../core/transports/index.js'
-import { SystemConsumerRequest, SystemResponse, SystemGenerateTokenRequest } from '../../common/types.js'
+import { HTTP } from '@core/transports/index.js'
+import { SystemConsumerRequest, SystemResponse, SystemGenerateTokenRequest } from '@common/types.js'
 
 export class System extends HTTP {
   async createConsumer(payload: SystemConsumerRequest): Promise<SystemResponse> {

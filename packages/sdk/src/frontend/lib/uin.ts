@@ -1,5 +1,5 @@
-import { HTTP } from '../../core/transports/index.js'
-import { GetOrCreateUINRequest, UINResponse, GenerateBatchUINResponse } from '../../common/types.js'
+import { HTTP } from '@core/transports/index.js'
+import { GetOrCreateUINRequest, UINResponse, GenerateBatchUINResponse } from '@common/types.js'
 
 export class Uin extends HTTP {
   async getOrCreateUIN(payload: GetOrCreateUINRequest[]): Promise<UINResponse> {

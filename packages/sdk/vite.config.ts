@@ -2,11 +2,19 @@
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import * as path from 'path'
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin'
 
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/sdk',
-  plugins: [dts({ entryRoot: 'src', tsconfigPath: path.join(__dirname, 'tsconfig.lib.json') })],
+  resolve: {
+    alias: {
+      '@common': path.resolve(__dirname, './src/common'),
+      '@core': path.resolve(__dirname, './src/core'),
+      '@frontend': path.resolve(__dirname, './src/frontend'),
+    },
+  },
+  plugins: [nxViteTsPaths(), dts({ entryRoot: 'src', tsconfigPath: path.join(__dirname, 'tsconfig.lib.json') })],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],
