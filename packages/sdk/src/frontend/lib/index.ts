@@ -2,7 +2,7 @@ import { Uin } from '@frontend/lib/uin.js'
 import { Log } from '@frontend/lib/log.js'
 import { System } from '@frontend/lib/system.js'
 
-export class NuiFederation {
+export class UINFederation {
   public uin: Uin
   public log: Log
   public system: System
