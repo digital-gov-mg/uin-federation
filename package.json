@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "lint": "nx run-many --target=lint --all",
-    "test": "nx run-many --target=test --all",
-    "build": "nx run-many --target=build --all",
+    "lint": "nx run-many --target=lint --all --no-cloud",
+    "test": "nx run-many --target=test --all --no-cloud",
+    "build": "nx run-many --target=build --all --no-cloud",
     "format": "nx format:write --all",
     "prepare": "husky",
     "compose:elk:up": "docker compose -p uin-federation -f infra/docker-setup/elk/compose.yml up -d",
