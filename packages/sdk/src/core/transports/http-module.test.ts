@@ -1,4 +1,3 @@
-// tests/core/transports/http-module.test.ts
 import type { HTTPModule, HTTPRequestParameters } from './http-module.js'
 
 describe('HTTPModule Interface', () => {
