@@ -16,4 +16,9 @@ export default {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: 'test-output/jest/coverage',
+  moduleNameMapper: {
+    '^@common/(.*)$': '<rootDir>/src/common/$1',
+    '^@core/(.*)$': '<rootDir>/src/core/$1',
+    '^@frontend/(.*)$': '<rootDir>/src/frontend/$1',
+  },
 }
