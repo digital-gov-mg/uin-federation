@@ -1,5 +1,5 @@
-import { HTTP, http } from './http.js'
-import type { HTTPModule } from './http-module.js'
+import { HTTP, http } from '@core/transports/http.js'
+import type { HTTPModule } from '@core/transports/http-module.js'
 
 export { HTTP, http }
 export type { HTTPModule }

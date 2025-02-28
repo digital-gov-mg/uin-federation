@@ -1,15 +1,14 @@
 import * as http from 'axios'
 
-import { HTTPRequestParameters, HTTPInstance, HTTPResponse } from './http-module.js'
-
-import { fetchSytemToken } from '../../common/utils/fetch-system-token.js'
-import { getCookie, setCookie } from '../../common/utils/cookie-process.js'
+import { HTTPRequestParameters, HTTPInstance, HTTPResponse } from '@core/transports/http-module.js'
+import { fetchSytemToken } from '@common/utils/fetch-system-token.js'
+import { getCookie, setCookie } from '@common/utils/cookie-process.js'
 
 export { http }
 
 export abstract class HTTP {
   private instance: HTTPInstance
-  private accessToken: string | null = getCookie({ name: 'nui_access_token' })
+  private accessToken: string | null = getCookie({ name: 'nui_access_token' }) ?? null
   private isAlreadyFetchingAccessToken = false
 
   constructor(private baseUrl: string, private clientId: string, private clientSecret: string) {
@@ -100,9 +99,16 @@ export abstract class HTTP {
       })
 
       return response.data
-    } catch (error) {
-      const errorMessage = error.response?.data?.message || error.message || 'An error occurred while sending request'
-      throw new Error(errorMessage)
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        const axiosError = error as { response?: { data?: { message?: string } } }
+        const errorMessage =
+          axiosError.response?.data?.message || error.message || 'An error occurred while sending request'
+
+        throw new Error(errorMessage)
+      }
+
+      throw new Error('An unknown error occurred while sending request')
     }
   }
 }

@@ -1,4 +1,4 @@
-import { http } from '../../core/transports/index.js'
+import { http } from '@core/transports/index.js'
 
 export const fetchSytemToken = ({
   baseUrl,
