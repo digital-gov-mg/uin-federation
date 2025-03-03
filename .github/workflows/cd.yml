@@ -34,7 +34,7 @@ jobs:
       - run: pnpm exec nx report --skip-nx-cache
         shell: bash
 
-      - run: pnpm exec nx release publish --skip-nx-cache
+      - run: pnpm exec nx release publish --skip-nx-cache --access public
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_NPM_TOKEN }}
