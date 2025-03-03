@@ -34,6 +34,9 @@ jobs:
       - run: pnpm exec nx report --skip-nx-cache
         shell: bash
 
+      - run: pnpm exec nx affected -t build --skip-nx-cache
+        shell: bash
+
       - run: pnpm exec nx release publish --skip-nx-cache --access public
         shell: bash
         env:
