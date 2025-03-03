@@ -1,6 +1,6 @@
 {
   "name": "@uin-federation/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This SDK connects to the NUI Federation API for getting or creating, revoke, generating batch for NUI from the API",
   "license": "Apache-2.0 license",
   "keywords": [
