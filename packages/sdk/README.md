@@ -1,11 +1,11 @@
 # UIN Federation SDK
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/digital-gov-mg/uin-federation/build.yml?style=flat-square)
-![NPM License](https://img.shields.io/npm/l/%40digital-gov-mg%2Fuin-federation?style=flat-square)
-![NPM Version](https://img.shields.io/npm/v/%40digital-gov-mg%2Fuin-federation?style=flat-square)
-![npm bundle size](https://img.shields.io/bundlephobia/min/%40digital-gov-mg%2Fuin-federation?style=flat-square)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/digital-gov-mg/uin-federation/ci.yml?style=flat-square)
+![NPM License](https://img.shields.io/npm/l/%40uin-federation%2Fsdk?style=flat-square)
+![NPM Version](https://img.shields.io/npm/v/%40uin-federation%2Fsdk?style=flat-square)
+![npm bundle size](https://img.shields.io/bundlephobia/min/%40uin-federation%2Fsdk?style=flat-square)
 
-This Frontend SDK connects to the UIN Federation API for getting or creating, revoke, generating batch for UIN from the API.
+This SDK connects to the UIN Federation API for getting or creating, revoke, generating batch for UIN from the API.
 
 ## Installation
 
