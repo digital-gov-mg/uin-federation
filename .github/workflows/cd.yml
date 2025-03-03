@@ -31,10 +31,10 @@ jobs:
       - run: pnpm install --frozen-lockfile
         shell: bash
 
-      - run: pnpm exec nx report
+      - run: pnpm exec nx report --skip-nx-cache
         shell: bash
 
-      - run: pnpm exec nx release publish
+      - run: pnpm exec nx release publish --skip-nx-cache
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_NPM_TOKEN }}
