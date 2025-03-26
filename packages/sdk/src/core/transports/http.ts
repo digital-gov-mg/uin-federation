@@ -1,7 +1,7 @@
 import * as http from 'axios'
 
 import { HTTPRequestParameters, HTTPInstance, HTTPResponse } from '@core/transports/http-module.js'
-import { fetchSytemToken } from '@common/utils/fetch-system-token.js'
+import { fetchSystemToken } from '@common/utils/fetch-system-token.js'
 import { getCookie, setCookie } from '@common/utils/cookie-process.js'
 
 export { http }
@@ -17,7 +17,7 @@ export abstract class HTTP {
     }
 
     if (!this.accessToken) {
-      fetchSytemToken({
+      fetchSystemToken({
         baseUrl: this.baseUrl,
         clientId: this.clientId,
         clientSecret: this.clientSecret,
@@ -64,7 +64,7 @@ export abstract class HTTP {
             this.isAlreadyFetchingAccessToken = true
 
             try {
-              const res = await fetchSytemToken({
+              const res = await fetchSystemToken({
                 baseUrl: this.baseUrl,
                 clientId: this.clientId,
                 clientSecret: this.clientSecret,

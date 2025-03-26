@@ -52,3 +52,10 @@ export interface SystemGenerateTokenRequest {
   clientId: string
   clientSecret: string
 }
+
+export interface HealthResponse {
+  status: string
+  info: Record<string, unknown>
+  error: Record<string, unknown>
+  details: Record<string, unknown>
+}
