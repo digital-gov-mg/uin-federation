@@ -34,6 +34,7 @@ export abstract class HTTP {
       headers: {
         'Content-Type': 'application/json',
       },
+      withCredentials: false,
     })
   }
 
