@@ -21,7 +21,7 @@ describe('fetchSystemToken', () => {
   it('should call http.default.post with correct parameters', () => {
     fetchSystemToken({ baseUrl, clientId, clientSecret })
 
-    expect(http.default.post).toHaveBeenCalledWith(`${baseUrl}/sytems/token`, {
+    expect(http.default.post).toHaveBeenCalledWith(`${baseUrl}/systems/token`, {
       clientId,
       clientSecret,
     })
