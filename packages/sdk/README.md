@@ -20,15 +20,19 @@ npm install @uin-federation/sdk
 ```ts
 import UINFederation from '@uin-federation/sdk'
 
-// Initialize NUIFederation
+// Initialize UINFederation
 const baseUrl = 'https://example.com/api'
 const clientId = 'your-client-id'
 const clientSecret = 'your-client'
 
-const uinFederation = new UINFederation(baseUrl, clientId, clientSecret)
+const federation = new UINFederation({
+  baseUrl: 'https://api.example.com',
+  clientId: 'client123',
+  clientSecret: 'secret456',
+})
 
 // Example 1: Get or Create UIN
-citizenDatas = [
+const citizenDatas = [
   {
     externalId: '123',
     firstname: 'John',
@@ -40,7 +44,7 @@ citizenDatas = [
 ]
 
 try {
-  const res = await uinFederation.uin.getOrCreate(citizenDatas)
+  const res = await federation.uins.getOrCreate(citizenDatas)
   console.log('UIN Response:', res)
 } catch (err) {
   console.log('Error creating or fetching UIN:', err.message)
@@ -49,7 +53,7 @@ try {
 // Example 2: Revoke a UIN
 const uin = '1234567890'
 try {
-  const res = await uinFederation.uin.revoke(uin)
+  const res = await federation.uins.revoke(uin)
   console.log('Revoke UIN Response:', res)
 } catch (err) {
   console.log('Error revoking UIN:', err.message)
@@ -58,7 +62,7 @@ try {
 // Example 3: Generate UIN Batch
 const count = 5
 try {
-  const res = await nuiFederation.uin.generateBatch(count)
+  const res = await federation.uins.generateBatch(count)
   console.log('Generate UIN Batch Response:', res)
 } catch (err) {
   console.log('Error generating UIN Batch:', err.message)

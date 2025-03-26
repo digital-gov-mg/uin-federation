@@ -1,4 +1,4 @@
-import { fetchSytemToken } from './fetch-system-token.js'
+import { fetchSystemToken } from './fetch-system-token.js'
 import { http } from '../../core/transports/index.js'
 
 jest.mock('../../core/transports/index', () => ({
@@ -9,7 +9,7 @@ jest.mock('../../core/transports/index', () => ({
   },
 }))
 
-describe('fetchSytemToken', () => {
+describe('fetchSystemToken', () => {
   const baseUrl = 'https://api.test.com'
   const clientId = 'test-client-id'
   const clientSecret = 'test-client-secret'
@@ -19,7 +19,7 @@ describe('fetchSytemToken', () => {
   })
 
   it('should call http.default.post with correct parameters', () => {
-    fetchSytemToken({ baseUrl, clientId, clientSecret })
+    fetchSystemToken({ baseUrl, clientId, clientSecret })
 
     expect(http.default.post).toHaveBeenCalledWith(`${baseUrl}/sytems/token`, {
       clientId,
@@ -31,7 +31,7 @@ describe('fetchSytemToken', () => {
     const mockResponse = { data: { accessToken: 'token', refreshToken: 'refresh' } }
     jest.mocked(http.default.post).mockResolvedValueOnce(mockResponse)
 
-    const result = await fetchSytemToken({ baseUrl, clientId, clientSecret })
+    const result = await fetchSystemToken({ baseUrl, clientId, clientSecret })
 
     expect(result).toBe(mockResponse)
   })

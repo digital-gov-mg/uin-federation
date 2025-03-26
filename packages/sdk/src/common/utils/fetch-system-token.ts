@@ -1,6 +1,6 @@
 import { http } from '@core/transports/index.js'
 
-export const fetchSytemToken = ({
+export const fetchSystemToken = ({
   baseUrl,
   clientId,
   clientSecret,
@@ -9,7 +9,7 @@ export const fetchSytemToken = ({
   clientId: string
   clientSecret: string
 }) => {
-  return http.default.post(`${baseUrl}/sytems/token`, {
+  return http.default.post(`${baseUrl}/systems/token`, {
     clientId,
     clientSecret,
   })

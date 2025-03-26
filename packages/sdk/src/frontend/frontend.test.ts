@@ -8,7 +8,7 @@ jest.mock('../frontend/lib/uin.js')
 jest.mock('../frontend/lib/log.js')
 jest.mock('../frontend/lib/system.js')
 
-describe('NuiFederation', () => {
+describe('UINFederation', () => {
   const baseUrl = 'https://api.test.com'
   const clientId = 'test-client-id'
   const clientSecret = 'test-client-secret'
