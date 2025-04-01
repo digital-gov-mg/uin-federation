@@ -1,1 +1,1 @@
-export * from 'src/client/lib/index.js'
+export * from './client/lib/index.js'
