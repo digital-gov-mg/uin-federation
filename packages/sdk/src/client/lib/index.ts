@@ -1,7 +1,7 @@
-import { Uin } from '@frontend/lib/uin.js'
-import { Log } from '@frontend/lib/log.js'
-import { System } from '@frontend/lib/system.js'
-import { Health } from '@frontend/lib/health.js'
+import { Uin } from 'src/client/lib/uin.js'
+import { Log } from 'src/client/lib/log.js'
+import { System } from 'src/client/lib/system.js'
+import { Health } from 'src/client/lib/health.js'
 
 export class UINFederation {
   public uins: Uin

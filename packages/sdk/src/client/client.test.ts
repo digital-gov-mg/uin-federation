@@ -1,14 +1,14 @@
-import { UINFederation } from '../frontend/lib/index.js'
-import { Uin } from '../frontend/lib/uin.js'
-import { Log } from '../frontend/lib/log.js'
-import { System } from '../frontend/lib/system.js'
-import { Health } from '../frontend/lib/health.js'
+import { UINFederation } from './lib/index.js'
+import { Uin } from './lib/uin.js'
+import { Log } from './lib/log.js'
+import { System } from './lib/system.js'
+import { Health } from './lib/health.js'
 
 // Mock the subclasses
-jest.mock('../frontend/lib/uin.js')
-jest.mock('../frontend/lib/log.js')
-jest.mock('../frontend/lib/system.js')
-jest.mock('../frontend/lib/health.js')
+jest.mock('../client/lib/uin.js')
+jest.mock('../client/lib/log.js')
+jest.mock('../client/lib/system.js')
+jest.mock('../client/lib/health.js')
 
 describe('UINFederation', () => {
   const baseUrl = 'https://api.test.com'
