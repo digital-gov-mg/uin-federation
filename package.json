@@ -18,7 +18,7 @@
   "devDependencies": {
     "@nx/eslint": "20.4.6",
     "@nx/eslint-plugin": "20.4.6",
-    "@nx/jest": "20.4.6",
+    "@nx/jest": "20.7.0",
     "@nx/js": "20.4.6",
     "@nx/vite": "20.4.6",
     "@nx/web": "20.4.6",
