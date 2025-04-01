@@ -1,1 +1,1 @@
-export * from '@frontend/lib/index.js'
+export * from './client/lib/index.js'
